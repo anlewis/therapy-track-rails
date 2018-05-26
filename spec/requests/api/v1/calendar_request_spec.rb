@@ -14,7 +14,7 @@ describe "Calendar API" do
     expect(appointments[0]['id']).to eq appointment_1.id
     expect(appointments[1]['id']).to eq appointment_2.id
 
-    appointments = appointments.first
+    appointment = appointments.first
 
     expect(appointment).to have_key "id"
     expect(appointment).to have_key "summary"

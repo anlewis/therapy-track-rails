@@ -1,23 +1,34 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/appointment.rb": [
+        1,
+        null
+      ],
+      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/controllers/api/v1/appointments_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/application_record.rb": [
-        0,
-        0,
-        0
-      ],
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/controllers/application_controller.rb": [
-        0,
         0,
         0
       ],
@@ -38,6 +49,6 @@
         0
       ]
     },
-    "timestamp": 1527375254
+    "timestamp": 1527376242
   }
 }
