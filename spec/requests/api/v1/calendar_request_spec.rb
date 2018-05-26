@@ -27,7 +27,7 @@ describe "Calendar API" do
     expect(appointment).not_to have_key "updated_at"
   end
 
-  xit "can get a single appointment by id" do
+  it "can get a single appointment by id" do
     id = create(:appointment).id
 
     get "/api/v1/appointments/#{id}"
