@@ -54,7 +54,7 @@ describe "Calendar API" do
     expect(response.status).to eq 404
   end
 
-  xit "can create a new appoinement" do
+  it "can create a new appoinement" do
     start_time = Time.zone.parse('2002-01-01 04:00:00 -0000')
     end_time = Time.zone.parse('2002-01-01 06:00:00 -0000')
     
@@ -75,8 +75,8 @@ describe "Calendar API" do
     expect(appointment.summary).to eq(appointment_params[:summary])
     expect(appointment.location).to eq(appointment_params[:location])
     expect(appointment.description).to eq(appointment_params[:description])
-    expect(appointment.start).to eq(appointment_params[:start])
-    expect(appointment.end).to eq(appointment_params[:end])
+    expect(appointment.start_time).to eq(appointment_params[:start_time])
+    expect(appointment.end_time).to eq(appointment_params[:end_time])
   end                            
 
   xit "can update an existing appointment" do
