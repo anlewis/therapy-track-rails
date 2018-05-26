@@ -27,7 +27,7 @@ describe "Calendar API" do
     expect(appointment).not_to have_key "updated_at"
   end
 
-  it "can get a single appointment by id" do
+  xit "can get a single appointment by id" do
     id = create(:appointment).id
 
     get "/api/v1/appointments/#{id}"
@@ -48,13 +48,13 @@ describe "Calendar API" do
     expect(appointment).not_to have_key "updated_at"
   end
 
-  it "show returns 404 if appointment with requested id does not exist" do
+  xit "show returns 404 if appointment with requested id does not exist" do
     get "/api/v1/appointments/1"
 
     expect(response.status).to eq 404
   end
 
-  it "can create a new appoinement" do
+  xit "can create a new appoinement" do
     start_time = Time.zone.parse('2002-01-01 04:00:00 -0000')
     end_time = Time.zone.parse('2002-01-01 06:00:00 -0000')
     
@@ -79,7 +79,7 @@ describe "Calendar API" do
     expect(appointment.end).to eq(appointment_params[:end])
   end                            
 
-  it "can update an existing appointment" do
+  xit "can update an existing appointment" do
     id = create(:appointment, summary: "Updated Appointment").id
     previous_summary = Appointment.last.summary
     appointment_params = { summary: "Appointment" }
@@ -92,7 +92,7 @@ describe "Calendar API" do
     expect(appointment.summary).to eq("Updated appointment")
   end
 
-  it "can destroy an appointment" do
+  xit "can destroy an appointment" do
     id = create(:appointment).id
 
     expect(Appointment.count).to eq(1)
@@ -104,7 +104,7 @@ describe "Calendar API" do
     expect{Appointment.find(id)}.to raise_error(ActiveRecord::RecordNotFound)
   end
 
-  it "destroy returns 404 if appointment with requested id does not exist" do
+  xit "destroy returns 404 if appointment with requested id does not exist" do
     delete "/api/v1/appointments/1"
 
     expect(response.status).to eq 404
