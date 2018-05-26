@@ -48,7 +48,7 @@ describe "Calendar API" do
     expect(appointment).not_to have_key "updated_at"
   end
 
-  xit "show returns 404 if appointment with requested id does not exist" do
+  it "show returns 404 if appointment with requested id does not exist" do
     get "/api/v1/appointments/1"
 
     expect(response.status).to eq 404
