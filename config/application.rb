@@ -18,6 +18,8 @@ Bundler.require(*Rails.groups)
 
 module TherapyTrackRails
   class Application < Rails::Application
+    # API setup
+    config.api_only = true
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
