@@ -94,7 +94,7 @@ describe "Calendar API" do
     expect(appointment.summary).to eq("Updated Appointment")
   end
 
-  xit "can destroy an appointment" do
+  it "can destroy an appointment" do
     id = create(:appointment).id
 
     expect(Appointment.count).to eq(1)
@@ -106,7 +106,7 @@ describe "Calendar API" do
     expect{Appointment.find(id)}.to raise_error(ActiveRecord::RecordNotFound)
   end
 
-  xit "destroy returns 404 if appointment with requested id does not exist" do
+  it "destroy returns 404 if appointment with requested id does not exist" do
     delete "/api/v1/appointments/1"
 
     expect(response.status).to eq 404

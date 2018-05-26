@@ -21,6 +21,13 @@ class Api::V1::AppointmentsController < ApplicationController
     render status: 400
   end
 
+  def destroy
+    Appointment.find(params[:id]).destroy
+      Appointment.delete(params[:id])
+  rescue
+    render status: 404
+  end
+
   private
 
     def appointment_params
