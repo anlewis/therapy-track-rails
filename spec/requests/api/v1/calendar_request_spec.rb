@@ -79,17 +79,19 @@ describe "Calendar API" do
     expect(appointment.end_time).to eq(appointment_params[:end_time])
   end                            
 
-  xit "can update an existing appointment" do
-    id = create(:appointment, summary: "Updated Appointment").id
+  it "can update an existing appointment" do
+    id = create(:appointment, summary: "Appointment").id
     previous_summary = Appointment.last.summary
-    appointment_params = { summary: "Appointment" }
+    appointment_params = { summary: "Updated Appointment" }
 
     patch "/api/v1/appointments/#{id}", params: {appointment: appointment_params}
+
     appointment = Appointment.find(id)
+    appointment.reload
 
     expect(response).to be_success
     expect(appointment.summary).to_not eq(previous_summary)
-    expect(appointment.summary).to eq("Updated appointment")
+    expect(appointment.summary).to eq("Updated Appointment")
   end
 
   xit "can destroy an appointment" do

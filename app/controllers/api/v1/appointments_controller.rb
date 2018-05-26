@@ -11,6 +11,14 @@ class Api::V1::AppointmentsController < ApplicationController
 
   def create
     render json: Appointment.create(appointment_params)
+  rescue
+    render status: 400
+  end
+
+  def update
+    render json: Appointment.update(params[:id], appointment_params)
+  rescue
+    render status: 400
   end
 
   private
