@@ -15,6 +15,12 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        null,
+        0,
+        null,
         null
       ],
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/controllers/application_controller.rb": [
@@ -59,6 +65,6 @@
         0
       ]
     },
-    "timestamp": 1527376608
+    "timestamp": 1527376803
   }
 }
