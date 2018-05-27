@@ -9,6 +9,7 @@ end
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'coveralls', require: false
+gem 'faker', '~> 1.8.7'
 gem 'figaro'
 gem 'google-api-client', '~> 0.11'
 gem 'jquery-rails'
