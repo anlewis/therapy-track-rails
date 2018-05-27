@@ -31,3 +31,5 @@ module TherapyTrackRails
     config.generators.system_tests = nil
   end
 end
+
+
