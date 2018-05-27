@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'omniauth-google-oauth2'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
+gem 'rack-cors'
 gem 'rails', '~> 5.1.5'
 gem 'rubocop', '~> 0.52.1', require: false
 gem 'sass-rails', '~> 5.0'

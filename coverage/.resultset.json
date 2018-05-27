@@ -55,7 +55,6 @@
       ],
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/controllers/application_controller.rb": [
         1,
-        1,
         null
       ],
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/serializers/appointment_serializer.rb": [
@@ -95,6 +94,6 @@
         0
       ]
     },
-    "timestamp": 1527378358
+    "timestamp": 1527432554
   }
 }
