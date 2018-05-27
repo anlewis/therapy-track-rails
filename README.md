@@ -22,9 +22,15 @@ This project uses the Ruby on Rails framework, which can be installed from [here
 
 In order to run this appication in the development environment, perform the following in the CLI:
 
+If you use rvm, the gemset is setup. From the project root directory, simply run:
+```
+rvm use .
+gem install bundler
+```
+Then:
 ```
 bundle install
-rake db:create db:migrate
+rails db:create db:migrate db:seed
 ```
 
 In order to spin-up the server, run: `rails s`
