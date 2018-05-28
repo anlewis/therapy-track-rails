@@ -3,54 +3,66 @@
     "coverage": {
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/appointment.rb": [
         1,
+        1,
         null
       ],
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/controllers/api/v1/appointments_controller.rb": [
         1,
         1,
-        0,
+        1,
         null,
         null,
         1,
-        0,
+        2,
         null,
-        0,
+        1,
         null,
         null,
         1,
-        0,
-        null,
-        0,
-        null,
-        null,
         1,
-        0,
         null,
         0,
         null,
         null,
         1,
-        0,
-        0,
+        1,
         null,
         0,
         null,
         null,
         1,
+        2,
+        1,
         null,
         1,
-        0,
+        null,
+        null,
+        1,
+        null,
+        1,
         null,
         null,
         null,
         null,
         null,
+        2,
         null,
         null
       ],
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/controllers/application_controller.rb": [
         1,
         1,
+        null
+      ],
+      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/serializers/appointment_serializer.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/mailers/application_mailer.rb": [
@@ -74,16 +86,7 @@
         0,
         0,
         0,
-        0
-      ],
-      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/serializers/appointment_serializer.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        null,
         0,
         0
       ],
@@ -108,6 +111,6 @@
         0
       ]
     },
-    "timestamp": 1527541997
+    "timestamp": 1527545574
   }
 }
