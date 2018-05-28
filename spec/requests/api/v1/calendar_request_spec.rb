@@ -1,9 +1,19 @@
 require 'rails_helper'
 
 describe "Calendar API" do
+
+  let!(:user) {create(:user)}
+
+  before :each do
+    sign_in user
+  end
+
   it "sends a list of all appoinments" do
-    appointment_1 = create(:appointment)
-    appointment_2 = create(:appointment)
+    appointment_1 = create(:appointment, user_id: user.id)
+    appointment_2 = create(:appointment, user_id: user.id)
+
+    user.appointments << appointment_1
+    user.appointments << appointment_2
 
     get '/api/v1/appointments'
 

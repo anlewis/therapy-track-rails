@@ -1,14 +1,12 @@
 require 'faker'
 
 user = User.create({
-  uid: 'MyId',
-  username: 'MyUsername',
-  provider: 'MyProvider',
-  name: 'MyName',
   email: ENV['test_user_email'],
   password: 'password',
   password_confirmation: 'password'
 })
+
+puts "Created #{User.count} users"
 
 5.times do |index|
   start_time = Faker::Time.forward(14, :evening)

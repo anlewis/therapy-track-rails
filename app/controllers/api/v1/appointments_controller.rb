@@ -36,6 +36,6 @@ class Api::V1::AppointmentsController < ApplicationController
                                           :description,
                                           :start_time,
                                           :end_time
-                                         )
+                                         ).merge({user_id: current_user.id})
     end
 end
