@@ -17,6 +17,7 @@ describe "Calendar API" do
     appointment = appointments.first
 
     expect(appointment).to have_key "id"
+    expect(appointment).to have_key "user_id"
     expect(appointment).to have_key "summary"
     expect(appointment).to have_key "location"
     expect(appointment).to have_key "description"
@@ -38,6 +39,7 @@ describe "Calendar API" do
     expect(appointment["id"]).to eq(id)
 
     expect(appointment).to have_key "id"
+    expect(appointment).to have_key "user_id"
     expect(appointment).to have_key "summary"
     expect(appointment).to have_key "location"
     expect(appointment).to have_key "description"
