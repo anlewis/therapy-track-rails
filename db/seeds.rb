@@ -1,5 +1,13 @@
 require 'faker'
 
+user = User.create({
+  email: ENV['test_user_email'],
+  password: 'password',
+  password_confirmation: 'password'
+})
+
+puts "Created #{User.count} users"
+
 5.times do |index|
   start_time = Faker::Time.forward(14, :evening)
   end_time = (start_time.to_time + 1.hours).to_datetime
@@ -8,6 +16,7 @@ require 'faker'
                       description: Faker::ChuckNorris.fact,
                       start_time: start_time,
                       end_time: end_time,
+                      user_id: user.id
                       )
 end
 
