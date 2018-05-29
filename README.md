@@ -66,6 +66,8 @@ From within the project folder, run `rubocop` to check files.
 
 #### References
 
+devise_token_auth setup by [Matt Hughes](http://matthughes.io/securing-a-rails-api-with-devise/)
+
 OAuth 2.0 for Google setup through [Rich on Rails](https://richonrails.com/articles/google-authentication-in-ruby-on-rails/)
 
 Google Calendar API setup following the guide [ReadySteadyCode](https://readysteadycode.com/howto-integrate-google-calendar-with-rails)
