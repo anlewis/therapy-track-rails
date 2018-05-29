@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  # devise_for :users
   root to: "home#index"
 
   namespace :api do
@@ -7,4 +7,8 @@ Rails.application.routes.draw do
       resources :appointments, except: [:new, :edit]
     end
   end
+
+  devise_for :users , defaults: { format: :json }, controllers: {
+    sessions: 'users/sessions'
+  }
 end
