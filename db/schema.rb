@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180529210746) do
+ActiveRecord::Schema.define(version: 20180531223701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "anxiety_reports", force: :cascade do |t|
+    t.integer "q1"
+    t.integer "q2"
+    t.integer "q3"
+    t.integer "q4"
+    t.integer "q5"
+    t.integer "q6"
+    t.integer "q7"
+    t.integer "difficulty_level"
+    t.bigint "report_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["report_id"], name: "index_anxiety_reports_on_report_id"
+  end
 
   create_table "appointments", force: :cascade do |t|
     t.string "summary"
@@ -25,6 +40,56 @@ ActiveRecord::Schema.define(version: 20180529210746) do
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_appointments_on_user_id"
+  end
+
+  create_table "basic_reports", force: :cascade do |t|
+    t.integer "oxygen"
+    t.integer "temperature"
+    t.integer "systolic"
+    t.integer "diastolic"
+    t.text "notes"
+    t.bigint "report_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["report_id"], name: "index_basic_reports_on_report_id"
+  end
+
+  create_table "depression_reports", force: :cascade do |t|
+    t.integer "q1"
+    t.integer "q2"
+    t.integer "q3"
+    t.integer "q4"
+    t.integer "q5"
+    t.integer "q6"
+    t.integer "q7"
+    t.integer "q8"
+    t.integer "q9"
+    t.integer "q10"
+    t.integer "q11"
+    t.integer "q12"
+    t.integer "q13"
+    t.integer "q14"
+    t.integer "q15"
+    t.integer "q16"
+    t.integer "q17"
+    t.integer "q18"
+    t.integer "q19"
+    t.integer "q20"
+    t.integer "q21"
+    t.bigint "report_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["report_id"], name: "index_depression_reports_on_report_id"
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.integer "status", default: 0
+    t.datetime "start_date"
+    t.datetime "end_date", default: -> { "now()" }
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_reports_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -54,5 +119,23 @@ ActiveRecord::Schema.define(version: 20180529210746) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  create_table "wellness_reports", force: :cascade do |t|
+    t.integer "avg_sleep"
+    t.integer "avg_heartrate"
+    t.integer "weight"
+    t.integer "bmi"
+    t.integer "weight_change"
+    t.integer "avg_daily_exercise"
+    t.bigint "report_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["report_id"], name: "index_wellness_reports_on_report_id"
+  end
+
+  add_foreign_key "anxiety_reports", "reports"
   add_foreign_key "appointments", "users"
+  add_foreign_key "basic_reports", "reports"
+  add_foreign_key "depression_reports", "reports"
+  add_foreign_key "reports", "users"
+  add_foreign_key "wellness_reports", "reports"
 end

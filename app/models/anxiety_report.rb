@@ -1,0 +1,2 @@
+class AnxietyReport < ApplicationRecord
+end
