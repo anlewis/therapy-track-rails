@@ -28,6 +28,7 @@
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/report.rb": [
         1,
         1,
+        1,
         null
       ],
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/wellness_report.rb": [
@@ -114,6 +115,28 @@
         null,
         null
       ],
+      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/controllers/api/v1/basic_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/mailers/application_mailer.rb": [
         0,
         0,
@@ -134,9 +157,6 @@
         0,
         0
       ],
-      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/controllers/api/v1/reports/basics_controller.rb": [
-
-      ],
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/helpers/application_helper.rb": [
         0,
         0
@@ -154,6 +174,6 @@
         0
       ]
     },
-    "timestamp": 1527811202
+    "timestamp": 1527813080
   }
 }

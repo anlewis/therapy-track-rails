@@ -32,8 +32,10 @@ describe "Report API" do
   end
 
   describe "basic reports" do
-    xit "creates a new basic report" do      
-      report_params = {
+    it "creates a new basic report" do
+      report = create(:report, user: user) 
+
+      basic_params = {
                         oxygen: 92,
                         temperature: 98,
                         systolic: 120,
@@ -41,17 +43,18 @@ describe "Report API" do
                         notes: "some report notes"
                       }
 
-      post "/api/v1/reports", params: {report: report_params}
+      post "/api/v1/reports/#{report.id}/basic", params: {basic: basic_params}
 
-      report = report.last
+      basic_report = BasicReport.last
 
       expect(response).to be_success
 
-      expect(report.oxygen).to eq(report_params[:oxygen])
-      expect(report.temperature).to eq(report_params[:temperature])
-      expect(report.systolic).to eq(report_params[:systolic])
-      expect(report.diastolic).to eq(report_params[:diastolic])
-      expect(report.notes).to eq(report_params[:notes])
+      expect(basic_report.report).to eq(report)
+      expect(basic_report.oxygen).to eq(basic_params[:oxygen])
+      expect(basic_report.temperature).to eq(basic_params[:temperature])
+      expect(basic_report.systolic).to eq(basic_params[:systolic])
+      expect(basic_report.diastolic).to eq(basic_params[:diastolic])
+      expect(basic_report.notes).to eq(basic_params[:notes])
     end
   end
 end
