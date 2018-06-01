@@ -33,11 +33,12 @@ class Api::V1::AppointmentsController < ApplicationController
   private
 
     def appointment_params
-      params.require(:appointment).permit(:summary,
-                                          :location,
-                                          :description,
-                                          :start_time,
-                                          :end_time
-                                         ).merge({user_id: current_user.id})
+      params.require(:appointment)
+            .permit(:summary,
+                    :location,
+                    :description,
+                    :start_time,
+                    :end_time
+                    ).merge({user_id: current_user.id})
     end
 end

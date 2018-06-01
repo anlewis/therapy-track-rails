@@ -1,12 +1,36 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/anxiety_report.rb": [
+        1,
+        null
+      ],
+      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/appointment.rb": [
         1,
         1,
         null
       ],
-      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/application_record.rb": [
+      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/basic_report.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/depression_report.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/report.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/wellness_report.rb": [
         1,
         1,
         null
@@ -19,6 +43,8 @@
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/controllers/api/v1/appointments_controller.rb": [
         1,
         1,
+        null,
+        1,
         1,
         null,
         null,
@@ -50,6 +76,7 @@
         1,
         null,
         1,
+        null,
         null,
         null,
         null,
@@ -67,6 +94,23 @@
         null,
         null,
         null,
+        null,
+        null
+      ],
+      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/controllers/api/v1/reports_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
         null,
         null
       ],
@@ -90,6 +134,9 @@
         0,
         0
       ],
+      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/controllers/api/v1/reports/basics_controller.rb": [
+
+      ],
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/helpers/application_helper.rb": [
         0,
         0
@@ -107,6 +154,6 @@
         0
       ]
     },
-    "timestamp": 1527629127
+    "timestamp": 1527811202
   }
 }
