@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :appointments, except: [:new, :edit]
       resources :reports do
         resources :basic, only: [:create]
+        resources :wellness, only: [:create]
       end
     end
   end

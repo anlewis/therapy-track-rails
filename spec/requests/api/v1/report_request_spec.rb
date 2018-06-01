@@ -57,4 +57,34 @@ describe "Report API" do
       expect(basic_report.notes).to eq(basic_params[:notes])
     end
   end
+
+  describe "wellness reports" do
+    it "creates a new wellness report" do
+      report = create(:report, user: user) 
+
+      wellness_params = {
+                        avg_sleep: 8,
+                        avg_heartrate: 80,
+                        weight: 120,
+                        bmi: 20,
+                        weight_change: 2,
+                        avg_daily_exercise: 20,
+                      }
+
+      post "/api/v1/reports/#{report.id}/wellness", params: {wellness: wellness_params}
+
+      wellness_report = WellnessReport.last
+
+      expect(response).to be_success
+
+      expect(wellness_report.report).to eq(report)
+      expect(wellness_report.avg_sleep).to eq(wellness_params[:avg_sleep])
+      expect(wellness_report.avg_heartrate).to eq(wellness_params[:avg_heartrate])
+      expect(wellness_report.weight).to eq(wellness_params[:weight])
+      expect(wellness_report.bmi).to eq(wellness_params[:bmi])
+      expect(wellness_report[:weight_change]).to eq(wellness_params[:weight_change])
+      # wellness_report.weight_change returns nil, don't know why
+      expect(wellness_report.avg_daily_exercise).to eq(wellness_params[:avg_daily_exercise])
+    end
+  end
 end
