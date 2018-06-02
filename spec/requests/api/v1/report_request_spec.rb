@@ -87,4 +87,37 @@ describe "Report API" do
       expect(wellness_report.avg_daily_exercise).to eq(wellness_params[:avg_daily_exercise])
     end
   end
+
+  describe "anxiety reports" do
+    it "creates a new anxiety report" do
+      report = create(:report, user: user) 
+
+      anxiety_params = {
+                        q1: 1,
+                        q2: 3,
+                        q3: 0,
+                        q4: 2,
+                        q5: 1,
+                        q6: 2,
+                        q7: 0,
+                        difficulty_level: 2,
+                      }
+
+      post "/api/v1/reports/#{report.id}/anxiety", params: {anxiety: anxiety_params}
+
+      anxiety_report = AnxietyReport.last
+
+      expect(response).to be_success
+
+      expect(anxiety_report.report).to eq(report)
+      expect(anxiety_report.q1).to eq(anxiety_params[:q1])
+      expect(anxiety_report.q2).to eq(anxiety_params[:q2])
+      expect(anxiety_report.q3).to eq(anxiety_params[:q3])
+      expect(anxiety_report.q4).to eq(anxiety_params[:q4])
+      expect(anxiety_report.q5).to eq(anxiety_params[:q5])
+      expect(anxiety_report.q6).to eq(anxiety_params[:q6])
+      expect(anxiety_report.q7).to eq(anxiety_params[:q7])
+      expect(anxiety_report.difficulty_level).to eq(anxiety_params[:difficulty_level])
+    end
+  end
 end

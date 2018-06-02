@@ -3,6 +3,7 @@
     "coverage": {
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/anxiety_report.rb": [
         1,
+        1,
         null
       ],
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/application_record.rb": [
@@ -26,6 +27,7 @@
         null
       ],
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/models/report.rb": [
+        1,
         1,
         1,
         1,
@@ -161,6 +163,31 @@
         null,
         null
       ],
+      "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/controllers/api/v1/anxiety_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/annalewis/turing/4module/projects/therapy-track-rails/app/mailers/application_mailer.rb": [
         0,
         0,
@@ -198,6 +225,6 @@
         0
       ]
     },
-    "timestamp": 1527878170
+    "timestamp": 1527904229
   }
 }
