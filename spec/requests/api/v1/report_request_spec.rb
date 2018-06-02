@@ -120,4 +120,63 @@ describe "Report API" do
       expect(anxiety_report.difficulty_level).to eq(anxiety_params[:difficulty_level])
     end
   end
+
+  describe "depression reports" do
+    it "creates a new depression report" do
+      report = create(:report, user: user) 
+
+      depression_params = {
+                        q1: 1,
+                        q2: 3,
+                        q3: 0,
+                        q4: 2,
+                        q5: 1,
+                        q6: 2,
+                        q7: 0,
+                        q8: 0,
+                        q9: 0,
+                        q10: 0,
+                        q11: 1,
+                        q12: 3,
+                        q13: 2,
+                        q14: 1,
+                        q15: 1,
+                        q16: 0,
+                        q17: 3,
+                        q18: 0,
+                        q19: 2,
+                        q20: 0,
+                        q21: 1,
+                      }
+
+      post "/api/v1/reports/#{report.id}/depression", params: {depression: depression_params}
+
+      depression_report = DepressionReport.last
+
+      expect(response).to be_success
+
+      expect(depression_report.report).to eq(report)
+      expect(depression_report.q1).to eq(depression_params[:q1])
+      expect(depression_report.q2).to eq(depression_params[:q2])
+      expect(depression_report.q3).to eq(depression_params[:q3])
+      expect(depression_report.q4).to eq(depression_params[:q4])
+      expect(depression_report.q5).to eq(depression_params[:q5])
+      expect(depression_report.q6).to eq(depression_params[:q6])
+      expect(depression_report.q7).to eq(depression_params[:q7])
+      expect(depression_report.q8).to eq(depression_params[:q8])
+      expect(depression_report.q9).to eq(depression_params[:q9])
+      expect(depression_report.q10).to eq(depression_params[:q10])
+      expect(depression_report.q11).to eq(depression_params[:q11])
+      expect(depression_report.q12).to eq(depression_params[:q12])
+      expect(depression_report.q13).to eq(depression_params[:q13])
+      expect(depression_report.q14).to eq(depression_params[:q14])
+      expect(depression_report.q15).to eq(depression_params[:q15])
+      expect(depression_report.q16).to eq(depression_params[:q16])
+      expect(depression_report.q17).to eq(depression_params[:q17])
+      expect(depression_report.q18).to eq(depression_params[:q18])
+      expect(depression_report.q19).to eq(depression_params[:q19])
+      expect(depression_report.q20).to eq(depression_params[:q20])
+      expect(depression_report.q21).to eq(depression_params[:q21])
+    end
+  end
 end

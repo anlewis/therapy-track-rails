@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         resources :basic, only: [:create]
         resources :wellness, only: [:create]
         resources :anxiety, only: [:create]
+        resources :depression, only: [:create]
       end
     end
   end
